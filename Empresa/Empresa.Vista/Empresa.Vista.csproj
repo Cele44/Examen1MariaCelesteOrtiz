@@ -13,8 +13,4 @@
     <ProjectReference Include="..\Empresa.Modelos\Empresa.Modelos.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EmpleadoVistas\" />
-  </ItemGroup>
-
 </Project>

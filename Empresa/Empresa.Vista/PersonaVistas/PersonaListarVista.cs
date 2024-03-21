@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Empresa.Bss;
+using Empresa.Vista.EmpleadoVistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace Empresa.Vista.PersonaVistas
         public PersonaListarVista()
         {
             InitializeComponent();
+        }
+        PersonaBss bss = new PersonaBss();
+
+        private void PersonaListarVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bss.ListarPersonaBss();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EmpleadoInsertarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }
