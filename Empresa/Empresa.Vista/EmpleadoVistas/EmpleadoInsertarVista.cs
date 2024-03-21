@@ -41,7 +41,7 @@ namespace Empresa.Vista.EmpleadoVistas
             empleado.Salario = Convert.ToDecimal(textBox3.Text);
             empleado.FechaContratacion = dateTimePicker1.Value;
             bsse.InsertarEmpleadoBss(empleado);
-            MessageBox.Show("Empleado registrado");
+            MessageBox.Show("Usuario registrado");
         }
 
         private void label4_Click(object sender, EventArgs e)

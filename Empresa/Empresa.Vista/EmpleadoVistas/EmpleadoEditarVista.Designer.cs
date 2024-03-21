@@ -133,6 +133,7 @@
             button1.TabIndex = 11;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // EmpleadoEditarVista
             // 
