@@ -26,7 +26,7 @@ namespace Empresa.Dal
         }
         public Empleado ObtenerEmpleadoId(int id)
         {
-            string consulta = "select * from empleado where idempledo=" + id;
+            string consulta = "select * from empleado where idempleado=" + id;
             DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
             Empleado e = new Empleado();
             if (tabla.Rows.Count > 0)
@@ -45,7 +45,7 @@ namespace Empresa.Dal
             string consulta = "update empleado set idpersona=" + e.IdPersona + "," +
                                                  "puesto='" + e.Puesto + "'," +
                                                  "salario=" + e.Salario + "," +
-                                                 "fechacontratacion='" + e.FechaContratacion + "'," +
+                                                 "fechacontratacion='" + e.FechaContratacion + "'" +
                                "where idempleado=" + e.IdEmpleado;
             conexion.Ejecutar(consulta);
         }
